@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Logistica - Shipping Company Website Template</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="{{ url_for('static', filename='lib/animate/animate.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+   
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow border-top border-5 border-primary sticky-top p-0">
+        <a href="{{ url_for('index') }}" class="navbar-brand bg-primary d-flex align-items-center px-4 px-lg-5">
+            <img src="{{ url_for('static', filename='img/a.png') }}" alt="Your Company Logo" width="60px" height="60px" padding-right: 15px>  <h2 class="mb-2 text-white">SHIP CLASSIFICATION</h2>
+                    </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="{{ url_for('index') }}" class="nav-item nav-link">Home</a>
+                <a href="{{ url_for('about') }}" class="nav-item nav-link active">About</a>
+                <a href="{{ url_for('service') }}" class="nav-item nav-link">Services</a>
+            
+            
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5" style="margin-bottom: 1rem;">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">About Us</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- About Start -->
+    <div class="container py-5 align-items-center">
+        <div class="container py-5">
+            <div class=" g-5 mx-lg-0" >
+                <div class="container py-5" data-wow-delay="0.1s fadeInUp">
+                    <div class="position-relative h-100">
+                    <h6 class="text-secondary text-uppercase mb-3 align-items-center">About Us</h6>
+                    <h3>The objective of this project is to develop a ship classification system utilizing deep learning techniques, specifically Convolutional Neural Networks (CNNs), to accurately classify images of ships into one of five categories: Cargo, Carrier, Military, Cruise, and Tankers. By leveraging the power of neural networks, the system aims to enhance maritime traffic monitoring, safeguard coastal defense, and streamline early warning systems.</h1>
+                    <h5>The scope of the project involves preprocessing a dataset containing ship images and dividing them into categories using a provided train.csv file. The project utilizes the VGG16 model, a pre-trained deep learning model known for its effectiveness in computer vision tasks. The top layer of the VGG16 model will be adapted for custom ship classification. Deployment of the model will be facilitated using the Flask framework, enabling seamless integration into existing systems or standalone applications.</h3>
+                        </div>
+                </div>
+            <section class="container1 container py-5">
+                <div class="card">
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='img/Aircraft Carrier_185.jpeg') }}" alt="img1">
+                        
+                    </div>
+                    <div>
+                        <h2>Aircraft Carrier</h2>
+                        <p>Floating airbases, dominating the seas with their sheer size and capability to project air power anywhere in the world.
+                        </p>
+                    </div></div>
+                <div class="card">
+                    <div class="image">
+                        <img src="{{ url_for('static', filename='img/Bulkers_1.jpeg') }}" alt="img2">
+                        
+                    </div>
+                    <div>
+                        <h2>Bulker</h2>
+                        <p>Giants of cargo transport, efficiently ferrying massive quantities of raw materials like coal, grains, and ore across oceans.
+                        </p>
+                    </div></div>
+                <div class="card">
+                    <div class="image">
+                            <img src="{{ url_for('static', filename='img/Car Carrier_1717.jpeg') }}" alt="img3">
+                            
+                        </div>
+                        <div>
+                            <h2>Car Carrier</h2>
+                            <p>Ocean highways for automobiles, transporting cars across the globe with precision and efficiency.
+                            </p>
+                        </div></div>
+                <div class="card">
+                    <div class="image">
+                             <img src="{{ url_for('static', filename='img/Container Ship_60.jpeg') }}" alt="img4">
+                                
+                            </div>
+                            <div>
+                                <h2>Container Carrier</h2>
+                                <p>Lifelines of global trade, seamlessly transporting standardized containers packed with goods across vast maritime routes.
+                                </p>
+                            </div></div>
+                <div class="card">
+                        <div class="image">
+                                <img src="{{ url_for('static', filename='img/Cruise_67.jpeg') }}" alt="img5">
+                                    
+                            </div>
+                            <div>
+                                <h2>Cruise</h2>
+                                <p>Floating resorts, offering passengers luxurious escapes with a myriad of amenities and activities as they sail to exotic destinations.
+                                </p>
+                            </div></div>
+                <div class="card">
+                        <div class="image">
+                               <img src="{{ url_for('static', filename='img/DDG_57.jpeg') }}" alt="img6">
+                                        
+                            </div>
+                             <div>
+                                <h2>DDG</h2>
+                                <p>(Guided Missile Destroyer) Guardians of the fleet, armed with advanced weaponry and cutting-edge technology, ready to defend against any threat at sea.
+                                </p>
+                            </div></div>
+                <div class="card">
+                        <div class="image">
+                                <img src="{{ url_for('static', filename='img/Recreational_670.jpeg') }}" alt="img7">
+                                        
+                            </div>
+                            <div>
+                                <h2>Recreational boat</h2>
+                                <p>Gateways to leisure, providing endless opportunities for relaxation and adventure on the water.
+                                </p>
+                            </div></div>
+                <div class="card">
+                        <div class="image">
+                                <img src="{{ url_for('static', filename='img/Sailboat_533.jpeg') }}" alt="img8">
+                                            
+                            </div>
+                            <div>
+                                <h2>Sailboat</h2>
+                                <p>Harnessing the wind's power, these vessels epitomize the freedom of sailing and the joy of exploration.
+                                </p>
+                            </div></div>
+                <div class="card">
+                        <div class="image">
+                                <img src="{{ url_for('static', filename='img/Submarine_344.jpeg') }}" alt="img9">
+                                                
+                            </div>
+                            <div>
+                                <h2>Submarine</h2>
+                                <p>Silent sentinels of the deep, prowling beneath the waves with stealth and precision, executing missions with unparalleled secrecy.
+                                </p>
+                            </div></div>
+                <div class="card">
+                        <div class="image">
+                                <img src="{{ url_for('static', filename='img/Tug_1024.jpeg') }}" alt="img10">
+                                                    
+                            </div>
+                            <div>
+                                <h2>Tug</h2>
+                                <p>Silent sentinels of the deep, prowling beneath the waves with stealth and precision, executing missions with unparalleled secrecy.
+                                </p>
+                            </div></div>
+                
+                        </section>
+                    </div>
+                    <div class="button-container" style="margin-top: 2rem;">
+                        <center>
+                            <a href="{{ url_for('service') }}" class="btn btn-primary py-md-3 px-md-5 me-3  ">Use Service</a>
+                        </center>
+                    </div>
+        </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-light footer pt-5 wow fadeIn " data-wow-delay="0.1s" style="margin-top: 6rem;">
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-0 back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <!-- Footer End -->
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static', filename='lib/wow/wow.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/counterup/counterup.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/owlcarousel/owl.carousel.min.js') }}"></script>
+
+    <!-- Template Javascript -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
