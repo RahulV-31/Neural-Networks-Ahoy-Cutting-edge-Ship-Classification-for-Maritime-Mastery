@@ -8,4 +8,3 @@ Enterprise Data Science in Practice badge certification
 
 https://www.credly.com/badges/ff3024e1-8a53-4db2-b23e-83b8c002b88f/public_url
 
-more info about project can connect on mail id rahulveggilam@gmail.com
